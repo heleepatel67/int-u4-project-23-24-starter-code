@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>INT: Unit 4 Quiz Project</title>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <div class="title">
-            <h1>Your Quiz Title Here!</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When will you get Married?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>When will you get Married?</h1>
+        <img src="https://www.quizony.com/when-will-you-get-married/when-will-you-get-married-1.png" class="center">
+
+        <div class="question-container">
+            <div class="question" id="question1">
+                <h2>Question 1: How old are you?</h2>
+                <button class="choice" data-question="1" data-choice="A">1-15</button>
+                <button class="choice" data-question="1" data-choice="B">16-30</button>
+            </div>
+            <div class="question" id="question2" style="display:none;">
+                <h2>Question 2: Are you dating anyone?</h2>
+                <button class="choice" data-question="2" data-choice="A">Yes</button>
+                <button class="choice" data-question="2" data-choice="B">No</button>
+            </div>
+            <style>
+                h2{
+                    text-align: center;
+                }
+            </style>
         </div>
-        <div class="questions">
-            <h4>User Question #1</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-06/24/16/asset/815a5287257c/anigif_sub-buzz-4360-1624553394-78_preview.gif?output-quality=auto&output-format=auto&downsize=360:*">
-            <h4>User Question #2</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/19/17/asset/buzzfeed-prod-web-05/anigif_sub-buzz-18467-1542667455-1.gif">
+        <div class="result-container" style="display:none;">
+            <h2>Your Result:</h2>
+            <p id="result"></p>
+            <button id="restart">Restart Quiz</button>
         </div>
-        <div class="result">
-            This is where the user will see their quiz result.
-        </div>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
